@@ -2,10 +2,10 @@
 ### **Historial Academico** 
 Nivel | Nombre De Escuela |
 ------------ | -------------|
-Kinder |Jardín de Niños Gilberto Puente González|
-Primaria | Don Jose De Escandon Y Helguera | 
-Secundaria|Escuela Secundaria Técnica Número 69|
-Preparatoria|Conalep 246|
+Kinder(2006-2007) |Jardín de Niños Gilberto Puente González|
+Primaria(2007-2013) | Don Jose De Escandon Y Helguera | 
+Secundaria(2013-2016)|Escuela Secundaria Técnica Número 69|
+Preparatoria(2016-2019)|Conalep 246|
 
 
 
