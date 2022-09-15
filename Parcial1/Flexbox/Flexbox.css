@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    width: 100vw;
+   height: 100vh;
+    
+   background-color: rgb(130, 211, 77);
+   display: flex;
+   flex-direction:row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: flex-start;
+    text-align: center;
+    font-size: xx-large;
+
+
+
+}
+.caja {
+background-color: blue;
+color: aqua;
+/* width: 100px;
+height: 100px; */
+margin: 10px;
+text-align: center;
+
+width: 0px;
+height: 120px;
+border-left: 50px solid #d9534f;
+border-right: 50px solid #d9534f;
+border-bottom: 35px solid transparent;
+}
+
+#caja1 {flex-grow: 1;}
+#caja2{flex-grow: 2;}
+#caja3{flex-grow: 3;}
+#caja4{flex-grow: 4;}
+#caja5{flex-grow: 5;}
+#caja6{flex-grow: 6;}
