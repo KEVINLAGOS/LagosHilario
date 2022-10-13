@@ -12,9 +12,8 @@
     grid-template-rows: 20% 70% 10%;
     grid-template-areas: 'menulat encabezado encabezado'
     'menulat columna1 columna2'
-    'menulat piepagina piepagina';
-
-
+    'menulat piepagina piepagina'
+    ;
     justify-content: stretch;
     align-content: stretch;
     justify-items: stretch;
@@ -30,27 +29,8 @@
 .cajaAmarilla{
     background-color: yellow;
 }
-
-
-
 #caja1{ grid-area: menulat;}
 #caja2{grid-area: encabezado;}
 #caja3{grid-area: columna1;}
 #caja4{grid-area: columna2 ;}
 #caja5{grid-area: piepagina;}
-
-
-
-@media  screen and (max-width:900px) {
-    .contenedor{
-        grid-template-columns: 30% 70%;
-    grid-template-rows: 50px 300px 400px 100px;
-    grid-template-areas: 'encabezado encabezado'
-    'menulat columna1'
-    'piepagina columna2'
-   
-    ;
-    }
-
-    
-}

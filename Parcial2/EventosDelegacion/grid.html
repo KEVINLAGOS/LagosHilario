@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="grid.css">
 
     <title>Document</title>
@@ -16,22 +17,16 @@
              <div id="caja3" class="caja">Caja 3</div>
                  <div id="caja4" class="caja">Caja 4</div>
                      <div id="caja5" class="caja">Caja 5</div>
+
                      
-
-                     <script src="EventosGrid.js" type="text/javascript">
-var elem=document.getElementById("#cont");
-elem.addEventListener("click",cambiarcaja);
-function cambiarcaja(evento){
-    console.log(evento);
-    if(document.getElementById(evento.target.id).classList.contains("caja1")){
-        document.getElementById(evento.target.id).classList.toggle("caja2");
-
-    }
-    if(evento.target.id=="caja3"){
-        elem.removeEventListener("Kevin",cambiarcaja);
-    }
-}
-
-                     </script>
 </body>
+<script>var elem=document.getElementById("cont");
+       elem.addEventListener("click",cambiarcaja);
+       function cambiarcaja (evento){
+           console.log(evento.target.id);
+           if(document.getElementById(evento.target.id).classList.contains("caja")){
+               document.getElementById(evento.target.id).classList.toggle("cajaAmarilla");
+            }
+       };
+</script>
 </html>

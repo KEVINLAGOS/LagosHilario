@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js" ></script>
+    <link rel="stylesheet" href="MenuAcordeon.css">
+</head>
+<body>
+  
+    <ul>
+        
+            <li class="opcion">Opcion1
+                <ul>
+                    <button><li  id="Opcion1-1" onclick="alert(`Click en Opcion1-1`)" class="subOpcion">Opcion1-1</li></button>
+                    <button> <li  id="Opcion1-2" class="subOpcion">Opcion1-2</li></button>
+                    <button> <li id="Opcion1-3"class="subOpcion">Opcion1-3</li></button>
+                </ul>
+            </li>
+      
+       
+            <li class="opcion">Opcion2
+                <ul>
+                    <li class="subOpcion">Opcion2-1</li>
+                    <li class="subOpcion">Opcion2-2</li>
+                    <li class="subOpcion">Opcion2-3</li>
+                </ul>
+            </li>
+        
+      
+            <li class="opcion">Opcion3
+                <ul>
+                    <li class="subOpcion">Opcion3-1</li>
+                    <li class="subOpcion">Opcion3-2</li>
+                    <li class="subOpcion">Opcion3-3</li>
+                </ul>
+            </li>
+ 
+        
+
+    </ul>
+       <ul>
+        <ul>
+            <script type="text/javascript">
+               
+            $(document).ready( function(){
+                $('#Opcion1-2').click(function(){
+                    alert('se escucho el click con la libreria  JQuery');
+                });
+                });
+                </script>
+
+</body>
+</html>
