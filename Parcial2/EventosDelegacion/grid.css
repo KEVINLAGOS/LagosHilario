@@ -26,8 +26,8 @@
     text-align: center;
     border: 1px solid red;
 }
-.cajaAmarilla{
-    background-color: yellow;
+.transformacion{
+    transform: skew(30deg,30deg);
 }
 #caja1{ grid-area: menulat;}
 #caja2{grid-area: encabezado;}

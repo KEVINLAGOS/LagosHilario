@@ -23,9 +23,9 @@
 <script>var elem=document.getElementById("cont");
        elem.addEventListener("click",cambiarcaja);
        function cambiarcaja (evento){
-           console.log(evento.target.id);
+           console.log(evento);
            if(document.getElementById(evento.target.id).classList.contains("caja")){
-               document.getElementById(evento.target.id).classList.toggle("cajaAmarilla");
+               document.getElementById(evento.target.id).classList.toggle("transformacion");
             }
        };
 </script>
