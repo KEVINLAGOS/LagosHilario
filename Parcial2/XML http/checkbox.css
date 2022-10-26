@@ -1,0 +1,82 @@
+        
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+.boton {
+    border: 1mm solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 1x; /*espacio alrededor texto*/
+    background-color: #2e518b; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 5px; /*bordes redondos*/
+    }
+.sidebar{
+    float: left;
+    background-color: rgb(26, 188, 156);
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+}
+
+/* input {display: none;}
+
+input:checked + .sidebar{
+    display: none;
+} */
+
+.escondido{
+    display: none;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+}
+
+a:hover{
+    background-color: blue;
+    color: white;
+}
+
+div.content{
+    float:left;
+    width: calc(100% - 200px);
+    background-color: aqua;
+    padding: 1px 16px;
+    height: 100%;
+}
+
+.contenedorOpcion{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    div.sidebar {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    .sidebar a{ float: left;}
+
+    div.content { margin-left: 0;
+    width: 100%;}
+
+}
+    
+@media screen and (max-width: 600px){
+    .sidebar a {
+        float: none;
+        text-align: center;
+    }
+}
