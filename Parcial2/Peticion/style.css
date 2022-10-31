@@ -1,0 +1,17 @@
+html{
+    box-sizing: border-box;
+    padding: 0px;
+    background-image: url(https://i.blogs.es/8935db/lroyale/1366_2000.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+h1{
+    display: block;
+    font-size: 3em;
+    background: orange;
+    color: black;
+    text-shadow: 1px 1px #fff;
+}
+
