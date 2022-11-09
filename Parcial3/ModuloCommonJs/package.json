@@ -42,6 +42,7 @@
     "test": "tape test/**/*.js | tap-dot"
   },
   "dependencies": {
+    "cowsay": "^1.5.0",
     "get-stdin": "8.0.0",
     "string-width": "~2.1.1",
     "strip-final-newline": "2.0.0",
