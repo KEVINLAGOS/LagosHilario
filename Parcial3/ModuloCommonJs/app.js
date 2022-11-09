@@ -1,12 +1,6 @@
-// const modulo  = require ("./modulo.js");
-// console.log(modulo.cuadrado(5));
+const modulo  = require ("./modulo.js");
+console.log(modulo.cuadrado(5));
+var cowsayjs = require("cowsayjs");
 
+console.log(cowsayjs.moo("can you see me?"));
 
-
-var cowsay = require("cowsay");
-
-console.log(cowsay.say({
-    text : "I'm a moooodule",
-    e : "oO",
-    T : "U "
-}));
