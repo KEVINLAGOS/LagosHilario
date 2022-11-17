@@ -55,6 +55,8 @@
             <button type="submit" class="btn btn-primary">Registrar</button>
             <button id="btnmodal" type="button" class="btn btn-primary" >Modal</button>
             <button type="button" class="btn btn-primary" id="btntoast">Mostrar Toast</button>
+            <button type="button" class="btn btn-primary" id="btnDatos">Traer Datos</button>
+
 
             <div id="mimodal"class="modal" tabindex="-1">
               <div class="modal-dialog">
@@ -97,7 +99,19 @@ variable.show();
   const variable1 = new bootstrap.Toast('.toast',{})
 variable1.show();
 })
- 
+
+document.getElementById("btnDatos").addEventListener("click",async () =>{
+  let respuesta= await fetch ('getregistro.php');
+  let dato =await respuesta.json();
+  document.getElementById("idNombre").value=dato.Nombre;
+  document.getElementById("idDireccion").value=dato.Direccion;
+  document.getElementById("idCurp").value=dato.Curp;
+  document.getElementById("idNacionalidad").value=dato.Nacionalidad;
+  document.getElementById("idNumero").value=dato.Numero;
+  document.getElementById("idCiudad").value=dato.Ciudad;
+  document.getElementById("idEstado").value=dato.Estado;
+  document.getElementById("idCodigo").value=dato.Codigo;
+})
    </script>
   </body>
  
