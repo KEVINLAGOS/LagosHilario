@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Registro Empleado(Farmacia) <img src="./pngwing.com (1).png" class="img-thumbnail" alt="hola"></h1>
+    <form id="formulario">
+        <div class="row"> 
+            <div class="form-group col-sm-12 col-md-6 col-lg-8">
+
+          <label for="idNombre" class="form-label">Nombre Completo</label>
+          <input type="nombre"  name="idNombre" class="form-control" id="idNombre" >
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-4">
+          <label for="idDireccion" class="form-label">Direccion</label>
+          <input type="direccion"  name="idDireccion"class="form-control" id="idDireccion">
+        </div>
+    </div>
+    <div class="row"> 
+      <div class="form-group col-sm-12 col-md-4 col-lg-5">
+
+    <label for="idCurp" class="form-label">Curp</label>
+    <input type="curp"  name=idCurp class="form-control" id="idCurp" >
+  </div>
+  <div class="form-group col-sm-12 col-md-4 col-lg-4">
+    <label for="idNacionalidad" class="form-label">Nacionalidad</label>
+    <input type="nacionalidad" name="idNacionalidad" class="form-control" id="idNacionalidad">
+  </div>
+  <div class="form-group col-sm-12 col-md-4 col-lg-3">
+    <label for="idNumero" class="form-label">Numero de Telefono</label>
+    <input type="numero"  name="idNumero" class="form-control" id="idNumero">
+  </div>
+</div>
+    <div class="row"> 
+        <div class="form-group col-sm-12 col-md-5 col-lg-5">
+
+      <label for="idCiudad" class="form-label">Ciudad</label>
+      <input type="ciudad" name="idCiudad" class="form-control" id="idCiudad" >
+    </div>
+          <div class="form-group  col-sm-12 col-md-5 col-lg-4">
+      <label for="idEstado" class="form-label">Estado</label>
+      <input type="estado"  name =idEstado class="form-control" id="idEstado">
+      
+             </div>
+             <div class="form-group    col-sm-12 col-md-2 col-lg-3">
+              <label for="idCodigo" class="form-label">Codigo Postal</label>
+              <input type="codigo"  id="idCodigo" class="form-control" id="idCodigo">
+              
+          </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button id="btnmodal" type="button" class="btn btn-primary" >Modal</button>
+            <button type="button" class="btn btn-primary" id="btntoast">Mostrar Toast</button>
+            <button type="button" class="btn btn-primary" id="btnDatos">Traer Datos</button>
+            <button type="button" class="btn btn-primary" id="btnTraer">Consultar Datos</button>
+
+
+            <div id="mimodal"class="modal" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Ventana Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Esta es una Ventana Modal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="lolo"class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <strong class="me-auto">Toast</strong>
+                  <small>1 seg accionado</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+               Este es un toast mensaje.
+                </div>
+              </div>
+            </div>
+        
+      </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+ document.getElementById('btnmodal').addEventListener("click", ()=>{
+   const variable = new bootstrap.Modal('#mimodal',{})
+variable.show();
+ });
+ document.getElementById('btntoast').addEventListener('click', () => {
+  const variable1 = new bootstrap.Toast('.toast',{})
+variable1.show();
+});
+
+document.getElementById("btnDatos").addEventListener("click",async () =>{
+  let respuesta= await fetch ('getregistro.php');
+  let dato =await respuesta.json();
+  document.getElementById("idNombre").value=dato.Nombre;
+  document.getElementById("idDireccion").value=dato.Direccion;
+  document.getElementById("idCurp").value=dato.Curp;
+  document.getElementById("idNacionalidad").value=dato.Nacionalidad;
+  document.getElementById("idNumero").value=dato.Numero;
+  document.getElementById("idCiudad").value=dato.Ciudad;
+  document.getElementById("idEstado").value=dato.Estado;
+  document.getElementById("idCodigo").value=dato.Codigo;
+});
+document.getElementById("btnTraer").addEventListener("click",async () => {
+  var datosFormulario= new FormData(document.getElementById("formulario"));
+  let respuesta = await fetch('conexion.php',{
+    method: 'POST',
+    body: datosFormulario
+  })
+  let dato = await respuesta.json();
+  
+  document.getElementById("idDireccion").value=dato.Direccion;
+  document.getElementById("idCurp").value=dato.Curp;
+  document.getElementById("idNacionalidad").value=dato.Nacionalidad;
+  document.getElementById("idNumero").value=dato.Numero;
+  document.getElementById("idCiudad").value=dato.Ciudad;
+  document.getElementById("idEstado").value=dato.Estado;
+  document.getElementById("idCodigo").value=dato.Codigo;
+
+})
+
+
+
+
+   </script>
+  </body>
+ 
+</html>
