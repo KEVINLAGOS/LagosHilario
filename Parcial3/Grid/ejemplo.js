@@ -2,13 +2,15 @@ $(document).ready(function() {
   const settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/lagoshilario/Parcial3/Js%20Grid/conexion.php",
+    "url": "http://localhost/lagoshilario/Parcial3/Grid/conexion.php",
     "method": "GET",
     "headers": {
-      "Accept": "*/*"
-   
+      "Accept": "*/*",
+      
     }
   };
+  
+ 
   
 
   
