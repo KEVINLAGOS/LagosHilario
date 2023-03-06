@@ -30,6 +30,7 @@ $('#btnIngresar').click(function() {
 
  
   $.post('Registrar.php',{Nom:Nombre,Dir:Direccion,Cur:Curp,Nac:Nacionalidad,Num:Numero,Ciud:Ciudad,Est:Estado,Cod:Codigo});
+
 });
 
 $('#btnModificar').click(function() {
