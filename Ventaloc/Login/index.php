@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['usuario'])){
-    header("location:bienvenida.php");
+    header("location:Interfaz.php");
 }
 ?>
 
@@ -18,6 +18,17 @@ if(isset($_SESSION['usuario'])){
 
     <link rel="stylesheet" href="estilos.css">
 </head>
+<style>
+.combo{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+</style>
 <body>
 
         <main>
@@ -53,8 +64,16 @@ if(isset($_SESSION['usuario'])){
                         <input type="text" placeholder="Apellido Paterno" name="ap">
                         <input type="text" placeholder="Apellido Materno" name="am">
                         <input type="text" placeholder="Correo Electronico" name="correo">
+                        <select class="combo" name="Tipo">
+                        <option value="Selecciona tipo de usuario">Tipo De Usuario....</option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Oficio">Oficio</option>
+                         </select>
                         <input type="text" placeholder="Usuario" name="usuario">
                         <input type="password" placeholder="Contraseña" name="clave">
+                        
+                        <br><br>
+                      
                         <button>Regístrarse</button>
                     </form>
                 </div>

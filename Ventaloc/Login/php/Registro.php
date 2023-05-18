@@ -5,11 +5,14 @@ $ap=$_POST['ap'];
 $am=$_POST['am'];
 $correo=$_POST['correo'];
 $usuario=$_POST['usuario'];
+$Tipo=$_POST['Tipo'];
 $clave=$_POST['clave'];
 $clave=hash('sha512',$clave);
-$query="INSERT INTO usuarios(nombre,ApellidoPaterno,ApellidoMaterno,Correo,Usuario,Clave) 
-VALUES ('$nombre','$ap','$am','$correo','$usuario','$clave') ";
+include "./Correo.php";
+$query="INSERT INTO `usuarios`( `nombre`, `ApellidoPaterno`, `ApellidoMaterno`, `Correo`, `Usuario`, `TipoUsuario`, `Clave`, `Codigo`, `Confirmado`) 
+VALUES ('$nombre','$ap','$am','$correo','$usuario','$Tipo','$clave','$codigo','No')";
 //verificar que el correo no se repita en la base de datos
+
 $verificar=mysqli_query($conexion,"SELECT * FROM usuarios WHERE correo='$correo' ");
 if(mysqli_num_rows($verificar)>0){
 echo' 
@@ -42,11 +45,14 @@ if($ejecutar){
     ';
 }
 else{
+  
+
     echo'
     <script>
     alert ("Intentalo De nuevo,usuario no almacenado");
     window.location="../index.php";
     </script>
+    
     ';
 }
 mysqli_close($conexion);
